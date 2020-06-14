@@ -14,3 +14,7 @@ jobs:
             - run: npm test
       - twilio/sendsms:
         body: This is a sample custom message for this particular build
+workflows:
+  build-and-notify:
+    jobs:
+      - build-test-and-notify
