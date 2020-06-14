@@ -16,7 +16,6 @@ jobs:
           name: Send SMS with Twilio
           commands:
             sendsms:
-              description: Send SMS notifications using Twilio
 workflows:
   build-and-notify:
     jobs:
