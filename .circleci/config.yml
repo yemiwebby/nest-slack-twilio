@@ -12,12 +12,15 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      # - run: npm test
+      - run: npm test
       - slack/notify:
           # channel: #technical
           color: '#42e2f4'
           mentions: 'yemiwebby,'
           message: This is a custom message notification
+      - slack/status:
+          fail_only: true
+          mentions: 'yemiwebby'
           # webhook: https://hooks.slack.com/services/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
       # - twilio/sendsms:
       #     body: Send SMS to twilio
