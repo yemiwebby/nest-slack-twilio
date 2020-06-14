@@ -12,11 +12,8 @@ jobs:
           name: Install dependencies
           command: npm install
       # - run: npm test
-      - run:
-          name: Send SMS with Twilio
-          command:
-            sendsms:
-              description: Send SMS notifications using Twilio
+      - twilio/sendsms:
+          name: Send SMS to twilio
 workflows:
   build-and-notify:
     jobs:
