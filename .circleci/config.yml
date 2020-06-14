@@ -13,7 +13,7 @@ jobs:
           command: npm install
       # - run: npm test
       - twilio/sendsms:
-          name: Send SMS to twilio
+          description: Send SMS to twilio
 workflows:
   build-and-notify:
     jobs:
