@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm test
+      # - run: npm test
       - twilio/sendsms:
         body: This is a sample custom message for this particular build
 workflows:
