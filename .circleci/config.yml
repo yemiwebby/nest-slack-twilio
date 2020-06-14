@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      # - run: npm test
+      - run: npm test
       - twilio/sendsms:
           body: Send SMS to twilio
       - twilio/alert:
