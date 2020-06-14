@@ -8,11 +8,14 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - run: npm install
+      - run: 
+          name: Install dependencies
+          command: npm install
       # - run: npm test
-      - twilio/sendsms:
-          parameters:
-            body: This is a sample custom message for this particular build
+      - run:
+          name: Send SMS with Twilio
+          command: twilio/sendsms
+              description: Send SMS Notifications using Twilio
 workflows:
   build-and-notify:
     jobs:
