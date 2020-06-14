@@ -5,8 +5,8 @@ orbs:
   slack: circleci/slack@3.4.2
 jobs:
   build-test-and-notify:
-    executor:
-      name: node/default
+    # executor:
+    #   name: node/default
     steps:
       - checkout
       - run:
