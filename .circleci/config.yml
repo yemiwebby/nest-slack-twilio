@@ -7,11 +7,6 @@ jobs:
     executor:
       name: node/default
     steps:
-      - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm test
       - twilio/sendsms:
         body: This is a sample custom message for this particular build
 workflows:
