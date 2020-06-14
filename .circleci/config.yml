@@ -12,9 +12,9 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      - run: npm test
+      # - run: npm test
       - slack/notify:
-          channel: technical-content
+          channel: #technical-content
           color: '#42e2f4'
           mentions: 'yemiwebby,'
           message: This is a custom message notification
