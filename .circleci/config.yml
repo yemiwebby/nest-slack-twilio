@@ -22,10 +22,10 @@ jobs:
           fail_only: true
           mentions: 'yemiwebby'
           # webhook: https://hooks.slack.com/services/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
-      # - twilio/sendsms:
-      #     body: Send SMS to twilio
-      # - twilio/alert:
-      #     body: Send SMS for error
+      - twilio/sendsms:
+          body: Send SMS to twilio
+      - twilio/alert:
+          body: Send SMS for error
 workflows:
   build-and-notify:
     jobs:
