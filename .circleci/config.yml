@@ -1,0 +1,16 @@
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+  twilio: circleci/twilio@0.0.1
+jobs:
+  build-test-and-notify:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm test
+      - twilio/sendsms:
+        body: This is a sample custom message for this particular build
