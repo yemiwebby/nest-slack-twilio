@@ -14,7 +14,9 @@ jobs:
       # - run: npm test
       - run:
           name: Send SMS with Twilio
-          command: sendsms
+          commands:
+            sendsms:
+              description: Send SMS notifications using Twilio
 workflows:
   build-and-notify:
     jobs:
