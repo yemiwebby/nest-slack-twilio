@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run: npm install
       # - run: npm test
-      - twilio/sendsms:
+      - twilio/alert:
         body: This is a sample custom message for this particular build
 workflows:
   build-and-notify:
